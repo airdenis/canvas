@@ -7,6 +7,12 @@
     <script>
         var c = document.querySelector("#c");
         var ctx = c.getContext("2d");
+        var image = new Image();
+        image.onload = function() {
+            console.log("Load image");
+            ctx.drawImage(image, 0, 0, c.width, c.height);
+        }
+        image.src = "image.png";
     </script>
     </body>
 </html>
